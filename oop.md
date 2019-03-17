@@ -35,3 +35,6 @@ Using Private, public, protected keywords.
 
 ### What is Duck Typing?
 - TODO:answear
+
+### What is Dependency Injection?
+- TODO:answear
