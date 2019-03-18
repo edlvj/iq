@@ -22,7 +22,22 @@ Overloading occurs when two or more methods in one class have the same method na
 Using Private, public, protected keywords.
 
 ### Describe S.O.L.I.D?
-- TODO:answear
+These five principles were called the S.O.L.I.D principles (the acronym was derived by Michael Feathers).
+
+S: Single Responsibility Principle
+O: Open-Closed Principle
+L: Liskov Substitution Principle
+I: Interface Segregation Principle
+D: Dependency Inversion Principle
+S: A class should be responsible for only one thing. If a class has more than one responsibility, it becomes coupled. A change to one responsibility results to modification of the other responsibility.
+
+O: Every animal adds its own implementation on how it makes a sound in the makeSound. The AnimalSound iterates through the array of animal and just calls its makeSound method.
+
+L: The aim of this principle is to ascertain that a sub-class can assume the place of its super-class without errors. If the code finds itself checking the type of class then, it must have violated this principle.
+
+I: This principle deals with the disadvantages of implementing big interfaces.
+
+D: There comes a point in software development where our app will be largely composed of modules. When this happens, we have to clear things up by using dependency injection. High-level components depending on low-level components to function.
 
 ### What is Multiple inheritance?
 - TODO:answear
