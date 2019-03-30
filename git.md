@@ -23,3 +23,5 @@ This resolves any number of heads, but the resulting tree of the merge is always
 
 - subtree
 This is a modified recursive strategy. When merging trees A and B, if B corresponds to a subtree of A, B is first adjusted to match the tree structure of A, instead of reading the trees at the same level. This adjustment is also done to the common ancestor tree.
+
+### How work git squash?

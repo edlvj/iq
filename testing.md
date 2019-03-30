@@ -1,5 +1,11 @@
 # Testing 
 
+### Describe TDD?
+- TODO:answer
+
+### Describe BDD?
+- TODO:answer
+
 ### What differents with stub and mock?
 
 - I believe the biggest distinction is that a stub you have already written with predetermined behavior. So you would have a class that implements the dependency (abstract class or interface most likely) you are faking for testing purposes and the methods would just be stubbed out with set responses. They would not do anything fancy and you would have already written the stubbed code for it outside of your test.

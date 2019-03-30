@@ -29,6 +29,9 @@ Lambdas and procs treat the ‘return’ keyword differently.
 ### Then we can use frezze or dup.
 - TODO:answear
 
+### What doing “frozen_string_literal”?
+ - TODO:answear
+
 ### What Differents in extend and include?
 include - By default, it mixes in the specified module's methods as instance methods in the target module/class. E.g.
 extend - adds the specified module's methods and constants to the target's metaclass
@@ -44,6 +47,12 @@ Class Variables: Class variables are available across different objects. A class
 
 ### What does ‘self’ mean?
 self: The receiver object of the current method.
+
+### What is Memoisation in ruby?
+- TODO:answear
+
+### What is Fiber?
+- TODO:answear
 
 
 

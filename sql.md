@@ -38,11 +38,21 @@ Yes. The columns in the search should be placed first in the composite index.
 ### What is the difference between TRUNCATE TABLE table_name and DELETE FROM table_name?  
 
 Both of these commands will cause the removal of rows from a table called table_name, but this will happen in very different ways.
+
 ### What is the difference between the types CHAR and VARCHAR? 
 CHAR is suitable for storing fixed-length string data and VARCHAR or NVARCHAR are more suitable for other lines.
+
 ### What is the difference between the types VARCHAR and NVARCHAR? In the VARCHAR format, you should store string data that you don’t need to transfer (for example, email addresses). 
 For other cases, you can use NVARCHAR.
+
 ### What is the difference between UNION and UNION ALL?  
 The difference between them is that if the query contains the same lines, the UNION will remove duplicates, leaving only one of these lines.
+
 ### What is the difference between WHERE and HAVING expressions? 
 WHERE can work independently and filter the data of each row of the result separately, and HAVING expression works only in combination with the GROUP BY expression and filters the already grouped values.
+
+### How primary key differs from foreign one?
+- TODO:answer
+
+### NoSQL or SQL: which one is better? Why?
+- TODO:answer

@@ -1,11 +1,5 @@
 # Methodologies
 
-### Describe TDD?
-- TODO:answer
-
-### Describe BDD?
-- TODO:answer
-
 ### Describe KISS?
 - TODO:answer
 
