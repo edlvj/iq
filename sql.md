@@ -1,13 +1,45 @@
 # SQL
 
-### What is Normalization in DB?
-- TODO:answer 
+### What is DB Normalization?
+Database Normalization is a technique of organizing the data in the database. Normalization is a systematic approach of decomposing tables to eliminate data redundancy(repetition) and undesirable characteristics like Insertion, Update and Deletion Anamolies. It is a multi-step process that puts data into tabular form, removing duplicated data from the relation tables. Following Noramlization Rules.
+
+###  Normalization Rules
+Normalization rules are divided into the following normal forms:
+
+- First Normal Form
+- Second Normal Form
+- Third Normal Form
+- BCNF
+- Fourth Normal Form
+
+- First Normal Form (1NF)
+For a table to be in the First Normal Form, it should follow the following 4 rules:
+It should only have single(atomic) valued attributes/columns.
+Values stored in a column should be of the same domain
+All the columns in a table should have unique names.
+And the order in which data is stored, does not matter.
+
+- Second Normal Form (2NF)
+It should be in the First Normal form.
+And, it should not have Partial Dependency.
+
+- Third Normal Form (3NF)
+It is in the Second Normal form.
+And, it doesn't have Transitive Dependency.
+
 
 ### Do you now that is replication?
-- TODO:answer 
+Database replication is a technique through which an instance of a database is exactly copied to, transferred to or integrated with another location. Database replication enables the copying of a database file from a master database management system (DBMS) and its exact deployment on a slave DBMS.
+Types of Data Replication:
 
-### What does 2 <> NULL return? The type of a NULL value in SQL has a slightly different meaning than in applied programming languages. If in C-like languages, NULL means the absence of some value, then in SQL it means only that we don’t know this value. For this reason, any comparison with NULL returns false.
-What does3 NOT IN (1, 2, NULL) return? As we know from the previous example, 3 <> NULL returns false, and therefore the entire condition (3 <> 1) AND (3 <> 2) AND (3 <> NULL) will also be false.
+- Transactional Replication – In Transactional replication users receive full initial copies of the database and then receive updates as data changes. Data is copied in real time from the publisher to the receiving database(subscriber) in the same order as they occur with the publisher therefore in this type of replication, transactional consistency is guaranteed. Transactional replication is typically used in server-to-server environments. It does not simply copy the data changes, but rather consistently and accurately replicates each change.
+- Snapshot Replication – Snapshot replication distributes data exactly as it appears at a specific moment in time does not monitor for updates to the data. The entire snapshot is generated and sent to Users. Snapshot replication is generally used when data changes are infrequent. It is bit slower than transactional because on each attempt it moves multiple records from one end to the other end. Snapshot replication is a good way to perform initial synchronization between the publisher and the subscriber.
+- Merge Replication – Data from two or more databases is combined into a single database. Merge replication is the most complex type of replication because it allows both publisher and subscriber to independently make changes to the database. Merge replication is typically used in server-to-client environments. It allows changes to be sent from one publisher to multiple subscribers.
+
+
+### What does 2 <> NULL return? The type of a NULL value in SQL has a slightly different meaning than in applied programming languages. If in C-like languages, NULL means the absence of some value, then in SQL it means only that we don’t know this value. For this reason, any comparison with NULL returns false.What does 3 NOT IN (1, 2, NULL) return? 
+
+As we know from the previous example, 3 <> NULL returns false, and therefore the entire condition (3 <> 1) AND (3 <> 2) AND (3 <> NULL) will also be false.
 
 ### Will this query execute? 
 ```
@@ -52,7 +84,42 @@ The difference between them is that if the query contains the same lines, the UN
 WHERE can work independently and filter the data of each row of the result separately, and HAVING expression works only in combination with the GROUP BY expression and filters the already grouped values.
 
 ### How primary key differs from foreign one?
-- TODO:answer
+In SQL Server, there are two keys - primary key and foreign key which seems identical, but actually both are different in features and behaviours.
 
+Primary Key
+- Primary key uniquely identify a record in the table.
+- Primary Key can't accept null values.
+- By default, Primary key is clustered index and data in the database table is physically organized in the sequence of clustered index.
+- We can have only one Primary key in a table.
+
+Foreign Key
+- Foreign key is a field in the table that is primary key in another table.
+- Foreign key can accept multiple null value.
+- Foreign key do not automatically create an index, clustered or non-clustered. You can manually create an index on foreign key.
+- We can have more than one foreign key in a table.
+
+Defining Primary key
+```
+CREATE TABLE Department 
+ (
+ DeptID int PRIMARY KEY, --define primary key
+ Name varchar (50) NOT NULL,
+ Address varchar(100) NULL 
+)
+```
+
+Defining Foreign key
+
+```
+CREATE TABLE Employee 
+ (
+ EmpID int PRIMARY KEY, --define primary key
+ Name varchar (50) NOT NULL,
+ Salary int NULL,
+ --define foreign key
+ DeptID int FOREIGN KEY REFERENCES Department(DeptID)
+ ) 
+
+```
 ### NoSQL or SQL: which one is better? Why?
 - TODO:answer

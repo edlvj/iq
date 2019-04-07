@@ -14,3 +14,9 @@
 
 ### Why do we need to use HTTPS instead of HTTP?
 - TODO:answear
+
+### Explain mass-assignment vulnerability.
+- TODO:answear
+
+### Explain difference between Symmetric-key and  asymmetric cryptography(Public) algorithm.
+- TODO:answear

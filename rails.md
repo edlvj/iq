@@ -48,4 +48,13 @@ Rack middleware is a way to filter a request and response coming into your appli
 ### Explain the difference between optimistic and pessimistic locking.
 - TODO:answear
 
+### Explain various forms of caching available in Rails.
+- TODO:answear
+
+### What is do Spring or Zeus in Rails?
+Spring and Zeus is a Rails application preloaders. It speeds up development by keeping your application running in the background so you don't need to boot it every time you run a test, rake task or migration.
+Also it have features for reload code after request.
+
+### Explain big O notation problem in Rails.
+- TODO:answear
 

@@ -1,6 +1,6 @@
 # Computer Science
 
-### Solve number 8 from 10 digit to 2 digit system. 
+### Solve number 8 from 10 digit to 2 digit system and from 2 digit to 10 digit. 
 - TODO:answer
 
 ### How work HTTP caching?
@@ -30,11 +30,15 @@ def bubble_sort(array)
 end
 ```
 
-### What is DNS and how it works.
-- TODO:answer
+### What is DNS and how does it works.
+The Domain Name Systems (DNS) is the phonebook of the Internet. Humans access information online through domain names, like nytimes.com or espn.com. Web browsers interact through Internet Protocol (IP) addresses. DNS translates domain names to IP addresses so browsers can load Internet resources. 
+For example:
+
+If you enter in browser domain example.com
+DNS resolver make request to DNS servers and find DNS record with his domain and redirect to IP of Server.
 
 ### Do you can do ipv4 addressing.
 - TODO:answer
 
 ### What is UUID?
-- TODO:answer
+Universally unique identifier (UUID) is a 128-bit number used to identify information in computer systems

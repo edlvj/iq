@@ -51,7 +51,13 @@ self: The receiver object of the current method.
 ### What is Memoisation in ruby?
 - TODO:answear
 
+### What’s Object Marshalling in ruby?
+Object Marshalling is serelization
+
 ### What is Fiber?
+- TODO:answear
+
+### Difference between String and Symbols.
 - TODO:answear
 
 

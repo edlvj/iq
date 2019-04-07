@@ -1,10 +1,12 @@
 # GIT
 
 ### What is the difference between git pull and git fetch?
-- TODO:answer 
+git fetch only downloads new data from a remote repository - but it doesn't integrate any of this new data into your working files. 
+git pull is shortcat for git git fetch and git merge.
 
 ### What is git stash?
-- TODO:answer 
+Stash the changes in a dirty working directory away.
+When you want to record the current state of the working directory and the index, but want to go back to a clean working directory. The command saves your local modifications away and reverts the working directory to match the HEAD commit
 
 ### Describe git merge strategies?
 User can specify merge strategy using -s option with git merge and git pull commands.
@@ -25,3 +27,4 @@ This resolves any number of heads, but the resulting tree of the merge is always
 This is a modified recursive strategy. When merging trees A and B, if B corresponds to a subtree of A, B is first adjusted to match the tree structure of A, instead of reading the trees at the same level. This adjustment is also done to the common ancestor tree.
 
 ### How work git squash?
+- TODO:answer 

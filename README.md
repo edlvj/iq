@@ -22,3 +22,4 @@
 - math
 - methodologies
 - computer_science
+- deployment and linux managment
