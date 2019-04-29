@@ -17,9 +17,10 @@
 ### OTHER
 - testing
 - oop
+- functional programming
 - git
 - security
 - math
 - methodologies
-- computer_science
+- computer science
 - deployment and linux managment

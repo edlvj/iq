@@ -36,3 +36,5 @@ BDD suggests to test behaviors, so instead of thinking of how the code is implem
 let - использует ленивый вызов перед блоком теста, тобишь то что в методе не будет выполнено, пока мы его не вызовем.
 let! -  вызывает метод перед каждым примером или блоком теста, используем мы его или нет.
 
+### Describe how to make load testing for web site?
+For load testing you can use Apache JMeter with own scenario. 

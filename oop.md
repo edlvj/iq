@@ -1,27 +1,35 @@
 # OOP
 
 ### Basic Concepts of OOPs?
+
 The Basic Concepts of OOP is ecapsulation, inheritance and polymorphism.
 
 ### What is a class?
+
 Сlass is a data structure that contains data fields, like a record, as well as various methods which operate on the contents of the record.
 
 ### What is an object?
-Is instance of a class
+
+Is instance of a class.
 
 ### What is Encapsulation?
+
 It’s mechanism for restricting direct access to some of the object's components
 
 ### What roles perform inheritance?
+
 inheritance is when an object or class is based on another object (prototypal inheritance) or class (class-based inheritance), using the same implementation.
 
 ### Different between method overriding and method overloading?
+
 Overloading occurs when two or more methods in one class have the same method name but different parameters. Overriding means having two methods with the same method name and parameters (i.e., method signature). One of the methods is in the parent class and the other is in the child class.
 
 ### What are the mechanisms in OOP languages that usually allow provide encapsulation of objects?
+
 Using Private, public, protected keywords.
 
 ### Describe S.O.L.I.D?
+
 These five principles were called the S.O.L.I.D principles (the acronym was derived by Michael Feathers).
 
 S: Single Responsibility Principle
@@ -40,10 +48,29 @@ I: This principle deals with the disadvantages of implementing big interfaces.
 D: There comes a point in software development where our app will be largely composed of modules. When this happens, we have to clear things up by using dependency injection. High-level components depending on low-level components to function.
 
 ### What is Multiple inheritance?
-- TODO:answear
+
+Multiple inheritance is a feature of some object-oriented computer programming languages in which an object or class can inherit characteristics and features from more than one parent object or parent class. 
+It is distinct from single inheritance, where an object or class may only inherit from one particular object or class.
+
+For example in C++
+```
+class C: public B, public A  // Note the order 
+{ 
+public: 
+  C()  { cout << "C's constructor called" << endl; } 
+}; 
+```
 
 ### What is Composition?
-- TODO:answear
+
+Composition is one of the fundamental concepts in object-oriented programming. It describes a class that references one or more objects of other classes in instance variables. This allows you to model a has-a association between objects.
+
+Example:
+```
+driver = Driver.new
+car = Car.new(driver)
+
+```
 
 ### What the difference between abstract class & interface?
 - TODO:answear
@@ -53,3 +80,4 @@ D: There comes a point in software development where our app will be largely com
 
 ### What is Dependency Injection?
 - TODO:answear
+

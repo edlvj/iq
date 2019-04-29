@@ -22,28 +22,64 @@ Rack::Handler::WEBrick.run app
 ```
 
 ### How does Rack middleware works?
+
 Rack middleware is a way to filter a request and response coming into your application. A middleware component sits between the client and the server, processing inbound requests and outbound responses, but it's more than interface that can be used to talk to web server. It’s used to group and order modules, which are usually Ruby classes, and specify dependency between them. Rack middleware module must only: – have constructor that takes next application in stack as parameter – respond to “call” method, that takes environment hash as a parameter. Returning value from this call is an array of: status code, environment hash and response body.
 
 ### What is MVC and how it works?
-- TODO:answear
+MVC is a pattern for the architecture of a software application. It separates an application into the following components:
 
-### What is RailsEngine?
-- TODO:answear
+- Models for handling data and business logic
+- Controllers for handling the user interface and application
+- Views for handling graphical user interface objects and presentation
+
+### What is Rails Engine?
+Engines can be considered miniature applications that provide functionality to their host applications. A Rails application is actually just a "supercharged" engine, with the Rails::Application class inheriting a lot of its behavior from Rails::Engine.
+
+Therefore, engines and applications can be thought of as almost the same thing, just with subtle differences, as you'll see throughout this guide. Engines and applications also share a common structure.
+
+Engines can also be isolated from their host applications. This means that an application is able to have a path provided by a routing helper such as articles_path and use an engine that also provides a path also called articles_path, and the two would not clash. Along with this, controllers, models and table names are also namespaced. You'll see how to do this later in this guide.
 
 ### What are Strong Parameters?
-- TODO:answear
+Action Controller parameters are forbidden to be used in Active Model mass assignments until they have been permitted. This means that you'll have to make a conscious decision about which attributes to permit for mass update. This is a better security practice to help prevent accidentally allowing users to update sensitive model attributes.
 
-### What is Object-Relational Mapping?
-- TODO:answear
+### What is Object-Relational Mapping and Active Record?
+Object Relational Mapping, commonly referred to as its abbreviation ORM, is a technique that connects the rich objects of an application to tables in a relational database management system. Using ORM, the properties and relationships of the objects in an application can be easily stored and retrieved from a database without writing SQL statements directly and with less overall database access code.
+
+Active Record gives us several mechanisms, the most important being the ability to:
+
+- Represent models and their data.
+- Represent associations between these models.
+- Represent inheritance hierarchies through related models.
+- Validate models before they get persisted to the database.
+- Perform database operations in an object-oriented fashion.
 
 ### Describe Active Record conventions.
-- TODO:answear
+Rails will pluralize your class names to find the respective database table. So, for a class Book, you should have a database table called books. The Rails pluralization mechanisms are very powerful, being capable of pluralizing (and singularizing) both regular and irregular words. When using class names composed of two or more words, the model class name should follow the Ruby conventions, using the CamelCase form, while the table name must contain the words separated by underscores. Examples:
+
+Database Table - Plural with underscores separating words (e.g., book_clubs).
+Model Class - Singular with the first letter of each word capitalized (e.g., BookClub).
 
 ### Explain the Migrations mechanism.
-- TODO:answear
+With the help of rails migration, we can make changes in the database schema which makes it possible to use the version control system for synchronization of those things with the actual code. 
+
+Rails migration can perform the following things:
+It helps in creating the table for the database.
+1. Dropping the table is possible with the help of this.
+2. Renaming of the table is possible.
+3. We can even add columns.
+4. Renaming of the columns can be done.
+5. Columns can be changed too.
+6. We can remove the columns and various other things can be done.
 
 ### Describe types of associations in Active Record.
-- TODO:answear
+- The belongs_to Association
+- The has_one Association
+- The has_many Association
+- The has_many :through Association
+- The has_one :through Association
+- The has_and_belongs_to_many Association
+Choosing Between belongs_to and has_one
+Choosing Between has_many :through and has_and_belongs_to_many
 
 ### Explain the difference between optimistic and pessimistic locking.
 - TODO:answear
@@ -57,4 +93,23 @@ Also it have features for reload code after request.
 
 ### Explain big O notation problem in Rails.
 - TODO:answear
+
+### What is Railtie and that it do in ROR. 
+
+Rails::Railtie is the core of the Rails framework and provides several hooks to extend Rails and/or modify the initialization process.
+
+Every major component of Rails (Action Mailer, Action Controller, Active Record, etc.) implements a railtie.
+- handles the bootstrapping process for a Rails application;
+- manages the rails command line interface;
+- and provides the Rails generators core.
+
+### What do helpers in Rails.
+Some helper classes are present in the helper sub directory which is used for assisting the view, model and the controller classes present in it.
+
+### Describe what is background job processing and Active job. 
+
+Active Job is a framework for declaring jobs and making them run on a variety of queuing backends. These jobs can be everything from regularly scheduled clean-ups, to billing charges, to mailings. Anything that can be chopped up into small units of work and run in parallel, really.
+
+
+
 

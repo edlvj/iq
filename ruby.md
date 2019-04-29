@@ -52,13 +52,38 @@ self: The receiver object of the current method.
 - TODO:answear
 
 ### What’s Object Marshalling in ruby?
-Object Marshalling is serelization
+Object Marshalling is serialization.
 
 ### What is Fiber?
-- TODO:answear
+Fibers are light weight primitives in the Ruby standard library which can be paused, resumed and scheduled manually. They are pretty much the same as ES6 Generators if you’re familiar with JavaScript.
+
+
+### When we are must use EventMachine?
+EventMachine (aka EM) is a gem which is written in C++ and Ruby. It provides event-driven I/O using the Reactor pattern and can basically make your Ruby code looks like Node.js
+
+One common reason to use EventMachine is the case when you have a lot of I/O operations and you don’t want to deal with threads manually. Manually handling threads can be difficult or often too expensive from a resource usage point of view. With EM you can handle multiple HTTP requests with a single thread by default.
 
 ### Difference between String and Symbols.
 - TODO:answear
+
+### Describe tool that you use for static analysis of code.
+
+
+### Write own each_slice?
+
+module Enumerable
+  def each_slice(count)
+    elements = self
+    
+    elements.pop(count) do |slice|
+      yield
+      break if slice.empty?
+    end
+    
+  end
+end
+
+### 
 
 
 
