@@ -85,24 +85,4 @@ CREATE TABLE Employee
  ) 
 
 ```
-### NoSQL or SQL: which one is better? Why?
-SQL DB has:
-- one language SQL
-- requires that you use predefined schemas
-- vertically scalable
-- table-based
-- better option for applications that require multi-row transactions - such as an accounting system - or for legacy systems that were built for a relational structure
 
-Conclusion:
-good choice for businesses that have rapid growth or databases with no clear schema definitions
-
-
-NoSQL databases has
-- defferent syntax
--  dynamic schema
-- horizontally scalable
-- Flexibility
-- Have different types: column-oriented, document-oriented, graph-based or organized as a KeyValue
-
-Conclusion:
-will benefit from its pre-defined structure and set schemas

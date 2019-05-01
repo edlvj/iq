@@ -10,7 +10,6 @@ We always must return Last-Modified or ETag Headers for clients.
 If response body on server not changed we must return HTTP status - 304 Not Modified
 If body changed we must return HTTP status - 200 Not Modified
 
-
 ### What is DNS and how does it works.
 The Domain Name Systems (DNS) is the phonebook of the Internet. Humans access information online through domain names, like nytimes.com or espn.com. Web browsers interact through Internet Protocol (IP) addresses. DNS translates domain names to IP addresses so browsers can load Internet resources. 
 For example:

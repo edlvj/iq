@@ -16,7 +16,6 @@ XSS enables attackers to inject client-side scripts into web pages viewed by oth
 
 - Session Fixation is an attack that permits an attacker to hijack a valid user session. The attack explores a limitation in the way the web application manages the session ID, more specifically the vulnerable web application. 
 When authenticating a user, it doesn’t assign a new session ID, making it possible to use an existent session ID.
-https://www.owasp.org/index.php/Session_fixation
 
 ### What is SQL Injection?
 SQL injection is a code injection technique that might destroy your database.
@@ -30,13 +29,50 @@ This will run: SELECT "users".* FROM "users" WHERE (name = '') OR 1--') LIMIT 1
 ```
 
 ### How should you store secure data such as a password?
-- TODO:answear
+Passwords and secret keys are usually stored in their hashed form. That means they are processed through a hash function before being saved to the database. A good hash function such as bcrypt has the following properties:
+
+- it produces the same output for the same input
+- it produces very different output for different inputs
+- its output is not distinguishable from random
+- it is not reversible
 
 ### Why do we need to use HTTPS instead of HTTP?
-- TODO:answear
+Http is just an application layer protocol that uses tcp to communicate on port 80. Whenever you go about searching any website this is the protocol used by default. Http is used for data transfer over the net but it is not secure. Anybody who knows how to intercept it can intercept it easily.
+
+Now people couldn’t have that now could they? Your precious credit card information being stolen in between the transfer. That is when https came into play. Https uses cryptographic protocols like ssl encryption to secure that data.
 
 ### Explain mass-assignment vulnerability.
-- TODO:answear
+In order to reduce the work for developers, many frameworks provide convenient mass-assignment functionality. This lets developers inject an entire set of user-entered data from a form directly into an object or database. Without it, developers would be forced to tediously add code specifically for each field of data, cluttering the code base with repeated form mapping code.
+
+The downside of this functionality is that it is often implemented without a whitelist that prevents users from assigning data to protected fields. An attacker may exploit this vulnerability to gain access to sensitive data or to cause data loss.
+
+For example
+```
+<form method="post" action="/signup">
+  <!-- INJECTED FIELD: -->
+  <input type="hidden" name="is_administrator" value="true">
+
+  <p>
+    Enter your email address:
+    <input type="text" name="user[email]">
+  </p>
+  <p>
+    Select a password:
+    <input type="password" name="user[password]">
+  </p>
+
+  <input type="submit" value="Sign up">
+</form>
+```
+
+The controller action will create the user, letting the attacker gain complete control of the web shop:
+
+```
+def signup
+  @user = User.create(params[:user])
+  # => User<email: "john@doe.com", password: "qwerty", is_administrator: true>
+end
+```
 
 ### Explain difference between Symmetric-key and  asymmetric cryptography(Public) algorithm.
 - TODO:answear

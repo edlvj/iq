@@ -28,5 +28,13 @@ def bubble_sort(array)
 end
 ```
 
-### Please write Fibonacci Sequence.
-- TODO:answear
+### Write Fibonacci Sequence.
+Fibonacci sequence, works such that each number is the sum of the two preceding ones, starting from 0 and 1.
+```
+def fibo(n, memo = {})
+  if n == 0 || n == 1
+    return n
+  end
+  memo[n] ||= fibo(n-1, memo) + fibo(n-2, memo)
+end
+```

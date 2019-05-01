@@ -72,12 +72,44 @@ car = Car.new(driver)
 
 ```
 
-### What the difference between abstract class & interface?
-- TODO:answear
+### What the difference between abstract class and interface?
+
+The abstract class inheritance is used when the derived class shares the core properties and behaviour of the abstract class. The kind of behaviour that actually defines the class.
+
+On the other hand interface inheritance is used when the classes share peripheral behaviour, ones which do not necessarily define the derived class.
 
 ### What is Duck Typing?
-- TODO:answear
+
+The idea is that you don't need a type in order to invoke an existing method on an object - if a method is defined on it, you can invoke it.
+The name comes from the phrase "If it looks like a duck and quacks like a duck, it's a duck".
 
 ### What is Dependency Injection?
-- TODO:answear
+Dependency injection is a technique whereby one object (or static method) supplies the dependencies of another object. A dependency is an object that can be used.
+
+
+Here is the same code, rewritten as a class with DI:
+```
+class RegisterUser
+  attr_reader :validator, :repo
+
+  def initialize(validator:, repo:)
+    @validator = validator
+    @repo = repo
+  end
+
+  def call(params)
+    if validator.validate(params)
+      repo.save(params)
+    else
+      nil
+    end
+  end
+end
+```
+
+The class is no longer directly coupled to its dependencies. The dependencies are passed in (injected) as arguments to initialize, and they are stored in instance variables.
+
+Different dependencies can be passed in.
+The class is independent. It can be tested in isolation, or extracted into a separate gem.
+All dependencies are explicitly listed as arguments to initialize.
 

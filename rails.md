@@ -78,14 +78,33 @@ It helps in creating the table for the database.
 - The has_many :through Association
 - The has_one :through Association
 - The has_and_belongs_to_many Association
-Choosing Between belongs_to and has_one
-Choosing Between has_many :through and has_and_belongs_to_many
 
 ### Explain the difference between optimistic and pessimistic locking.
-- TODO:answear
+Optimistic Locking 
+assumes that a database transaction conflict is very rare to happen. It uses a version number of the record to track the changes. It raise an error when other user tries to update the record while it is lock.
+
+Just add a lock_version column to the table you want to place the lock and Rails will automatically check this column before updating the record.
+
+Pessimistic locking
+ assumes that database transaction conflict is very likely to happen. It locks the record until the transaction is done. If the record is currently lock and the other user make a transaction, that second transaction will wait until the lock in first transaction is release.
+
+```
+user = User.lock.find(1) #lock the record
+user.name = 'ryan'
+user.save! #release the lock
+```
+or you can also use with_lock method to select and lock the record.
+```
+user = User.find(1)
+user.with_lock do #lock the record
+  # you can run other code here.
+  user.name = 'ryan'
+  user.save!
+end
+```
 
 ### Explain various forms of caching available in Rails.
-- TODO:answear
+https://edgeguides.rubyonrails.org/caching_with_rails.html
 
 ### What is do Spring or Zeus in Rails?
 Spring and Zeus is a Rails application preloaders. It speeds up development by keeping your application running in the background so you don't need to boot it every time you run a test, rake task or migration.

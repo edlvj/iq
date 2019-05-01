@@ -1,14 +1,17 @@
 # GIT
 
 ### What is the difference between git pull and git fetch?
+
 git fetch only downloads new data from a remote repository - but it doesn't integrate any of this new data into your working files. 
 git pull is shortcat for git git fetch and git merge.
 
 ### What is git stash?
+
 Stash the changes in a dirty working directory away.
 When you want to record the current state of the working directory and the index, but want to go back to a clean working directory. The command saves your local modifications away and reverts the working directory to match the HEAD commit
 
 ### Describe git merge strategies?
+
 User can specify merge strategy using -s option with git merge and git pull commands.
 
 - resolve (default)

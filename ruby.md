@@ -33,32 +33,39 @@ Lambdas and procs treat the ‘return’ keyword differently.
  - TODO:answear
 
 ### What Differents in extend and include?
+
 include - By default, it mixes in the specified module's methods as instance methods in the target module/class. E.g.
 extend - adds the specified module's methods and constants to the target's metaclass
 
 ### Describe the difference between class and instance variables?
+
 Instance Variables: Instance variables are available across methods for any particular instance or object. That means that instance variables change from object to object. Instance variables are preceded by the at sign (@) followed by the variable name.
 Class Variables: Class variables are available across different objects. A class variable belongs to the class and is a characteristic of a class. They are preceded by the sign @@ and are followed by the variable name.
 
 ### What are the three levels of method access control for classes and what do they signify?
+
 - Public methods can be called by everyone - no access control is enforced. A class's instance methods (these do not belong only to one object; instead, every instance of the class can call them) are public by default; anyone can call them. The initialize method is always private.
 - Protected methods can be invoked only by objects of the defining class and its subclasses. Access is kept within the family. However, usage of protected is limited.
 - Private methods cannot be called with an explicit receiver - the receiver is always self. This means that private methods can be called only in the context of the current object; you cannot invoke another object's private methods.
 
 ### What does ‘self’ mean?
+
 self: The receiver object of the current method.
 
 ### What is Memoisation in ruby?
 - TODO:answear
 
 ### What’s Object Marshalling in ruby?
+
 Object Marshalling is serialization.
 
 ### What is Fiber?
+
 Fibers are light weight primitives in the Ruby standard library which can be paused, resumed and scheduled manually. They are pretty much the same as ES6 Generators if you’re familiar with JavaScript.
 
 
 ### When we are must use EventMachine?
+
 EventMachine (aka EM) is a gem which is written in C++ and Ruby. It provides event-driven I/O using the Reactor pattern and can basically make your Ruby code looks like Node.js
 
 One common reason to use EventMachine is the case when you have a lot of I/O operations and you don’t want to deal with threads manually. Manually handling threads can be difficult or often too expensive from a resource usage point of view. With EM you can handle multiple HTTP requests with a single thread by default.
@@ -66,11 +73,8 @@ One common reason to use EventMachine is the case when you have a lot of I/O ope
 ### Difference between String and Symbols.
 - TODO:answear
 
-### Describe tool that you use for static analysis of code.
-
-
 ### Write own each_slice?
-
+```
 module Enumerable
   def each_slice(count)
     elements = self
@@ -82,9 +86,7 @@ module Enumerable
     
   end
 end
-
-### 
-
+```
 
 
 

@@ -1,7 +1,11 @@
 # Methodologies
 
-### Describe KISS principe?
+### Describe KISS principle?
 Keep it simple stupid
+
+### Describe YAGNI principle?
+You aren't gonna need it
+is a principle of extreme programming (XP) that states a programmer should not add functionality until deemed necessary.
 
 ### Describe DRY
 Do not repeat yourself - is a principle of software development aimed at reducing repetition of software patterns,[1] replacing it with abstractions or using data normalization to avoid redundancy
