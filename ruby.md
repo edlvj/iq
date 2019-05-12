@@ -7,13 +7,23 @@ In ruby its a object, abstraction data typy with it we can describe object aroun
 Modules are about providing methods that you can use across multiple classes - think about them as "libraries" . Classes are about objects; modules are about functions.
 
 ### What is Eigenclass in Ruby?
-- TODO:answear
+A hidden class associated with each specific instance of another class.
+```
+class << foo
+	# do something with the eigenclass of foo
+end
+```
 
 ### Explain what singleton methods in Ruby?
 singleton methods in ruby are to add beviahore to one object to class
 
-### What Differents in load and require?
-TODO:answear
+### What differents in load and require?
+The load method simply reads and parses another files into your code every time a script is executed.
+main difference is that require will only load the passed in file one time, and then remember that file has been loaded.
+For this reason, require is the more popular option when you are using third-party libraries in your program or application
+
+### When we need use prepend?
+It actually works like include, except that instead of inserting the module between the class and its superclass in the chain, it will insert it at the bottom of the chain, even before the class itself.
 
 ### Different with Proc and Lamda.
 Before I get into the differences between procs and lambdas, it is important to mention that they are both Proc objects.
@@ -23,14 +33,9 @@ Lambdas and procs treat the ‘return’ keyword differently.
 ### What modificate string .concat or +=?
 '+' created new object every time and '.concat' works on the same object.
 
-### When we need use prepend?
-- TODO:answear
-
-### Then we can use frezze or dup.
-- TODO:answear
-
 ### What doing “frozen_string_literal”?
- - TODO:answear
+-  directive frozen_string_literal in file
+makes all variables in file frezzed.
 
 ### What Differents in extend and include?
 
@@ -49,11 +54,14 @@ Class Variables: Class variables are available across different objects. A class
 - Private methods cannot be called with an explicit receiver - the receiver is always self. This means that private methods can be called only in the context of the current object; you cannot invoke another object's private methods.
 
 ### What does ‘self’ mean?
-
 self: The receiver object of the current method.
 
 ### What is Memoisation in ruby?
-- TODO:answear
+
+Memoisation is to make sure that instance variables in a method only get set once regardless of how many times the method is called.
+```
+@users ||= Users.all
+```
 
 ### What’s Object Marshalling in ruby?
 
@@ -71,7 +79,8 @@ EventMachine (aka EM) is a gem which is written in C++ and Ruby. It provides eve
 One common reason to use EventMachine is the case when you have a lot of I/O operations and you don’t want to deal with threads manually. Manually handling threads can be difficult or often too expensive from a resource usage point of view. With EM you can handle multiple HTTP requests with a single thread by default.
 
 ### Difference between String and Symbols.
-- TODO:answear
+
+The diffence that String id mutable and Symbols not.
 
 ### Write own each_slice?
 ```
