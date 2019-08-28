@@ -38,3 +38,8 @@ let! -  вызывает метод перед каждым примером и�
 
 ### Describe how to make load testing for web site?
 For load testing you can use Apache JMeter with own scenario. 
+
+### What's the difference between “include_examples” and “it_behaves_like”?
+include_examples — include(s) the examples in the current context
+
+it_behaves_like "name" — include(s) the examples in a nested context

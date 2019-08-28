@@ -55,6 +55,7 @@ Class Variables: Class variables are available across different objects. A class
 
 ### What does ‘self’ mean?
 self: The receiver object of the current method.
+Used for static methods in ruby.
 
 ### What is Memoisation in ruby?
 

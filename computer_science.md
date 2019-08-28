@@ -32,3 +32,12 @@ The host part of the address is likened to an individual or person’s name on t
 
 ### What is UUID?
 Universally unique identifier (UUID) is a 128-bit number used to identify information in computer systems
+
+### Describe difference between Authentication and Authorization?
+
+Authentication is the mechanism whereby systems may securely identify their users. Authentication systems provide an answers to the questions:
+Who is the user?
+
+Authorization, is the mechanism by which a system determines what level of access a particular authenticated user should have to secured resources controlled by the system. For example, a database management system might be designed so as to provide certain specified individuals with the ability to retrieve information from a database but not the ability to change data stored in the datbase, while giving other individuals the ability to change data. Authorization systems provide answers to the questions:
+
+Is user X authorized to access or perform resource R?

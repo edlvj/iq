@@ -111,7 +111,14 @@ Spring and Zeus is a Rails application preloaders. It speeds up development by k
 Also it have features for reload code after request.
 
 ### Explain big O notation problem in Rails.
-- TODO:answear
+Big-O notation is just a fancy way of describing how your code's performance depends on the amount of data it's processing.
+
+Performance means one of two things: speed, or ram usage. In computer science class you'd refer to these as "time complexity" and "space complexity." Big-O notation is used for both, but we're going to focus on speed here, since that seems to be the more common usage.
+
+How to Avoid this in Ruby
+- Finding a specific item in a Hash is faster than in an Array
+- Avoid nested loops
+- Watch out for accidental DB queries when generating lists in your views
 
 ### What is Railtie and that it do in ROR. 
 
@@ -129,6 +136,12 @@ Some helper classes are present in the helper sub directory which is used for as
 
 Active Job is a framework for declaring jobs and making them run on a variety of queuing backends. These jobs can be everything from regularly scheduled clean-ups, to billing charges, to mailings. Anything that can be chopped up into small units of work and run in parallel, really.
 
+
+### For that you should use .transaction mehtod for ActiveRecord Models.
+
+Transactions are protective blocks where SQL statements are only permanent if they can all succeed as one atomic action. The classic example is a transfer between two accounts where you can only have a deposit if the withdrawal succeeded and vice versa. Transactions enforce the integrity of the database and guard the data against program errors or database break-downs. So basically you should use transaction blocks whenever you have a number of statements that must be executed together or not at all.
+
+Exceptions will force a ROLLBACK that returns the database to the state before the transaction began.
 
 
 
