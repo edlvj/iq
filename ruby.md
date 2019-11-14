@@ -72,7 +72,6 @@ Object Marshalling is serialization.
 
 Fibers are light weight primitives in the Ruby standard library which can be paused, resumed and scheduled manually. They are pretty much the same as ES6 Generators if you’re familiar with JavaScript.
 
-
 ### When we are must use EventMachine?
 
 EventMachine (aka EM) is a gem which is written in C++ and Ruby. It provides event-driven I/O using the Reactor pattern and can basically make your Ruby code looks like Node.js
