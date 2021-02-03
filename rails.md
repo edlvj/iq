@@ -143,5 +143,15 @@ Transactions are protective blocks where SQL statements are only permanent if th
 
 Exceptions will force a ROLLBACK that returns the database to the state before the transaction began.
 
+### Describe diffirence between .include and .joins?
+
+:joins returns read-only objects, 
+:includes does not
+
+:joins uses inner join, :includes uses outer join.
+
+the main reason of :includes is eager loading, to avoid the N+1 problem of loading in attributes of each object using a separate query.
+
+
 
 

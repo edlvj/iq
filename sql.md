@@ -29,6 +29,7 @@ WHERE
 	year_of_birth = 2000
 ```	
 Expressions that are responsible for getting data, such as WHERE, need to use the original field names.
+
 ### Does column order in a composite index matter? 
 Yes. The columns in the search should be placed first in the composite index.
 
@@ -87,12 +88,9 @@ CREATE TABLE Employee
 
 ```
 
-### That is Transaction in SLQ.
+### What is Transaction in SLQ?
 - TODO:answer
 
-### Describe between OUTER JOIN от INNER JOIN?
-- TODO:answer
-
-### What is aggregation?
+### Describe between LEFT JOIN от INNER JOIN?
 - TODO:answer
 

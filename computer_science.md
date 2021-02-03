@@ -43,5 +43,14 @@ Authorization, is the mechanism by which a system determines what level of acces
 Is user X authorized to access or perform resource R?
 
 ### What caching strategies you're know?
-
 I know Lazy Loading and Write Through
+
+
+### What is horizontally and vertically scaling.
+https://github.com/vaquarkhan/vaquarkhan/wiki/Difference-between-scaling-horizontally-and-vertically
+
+
+### What is Load Balancing and That Algoritms.
+https://www.nginx.com/resources/glossary/load-balancing/
+
+

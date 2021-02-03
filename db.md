@@ -1,7 +1,58 @@
 # Database Theory
 
+### Describe diffrent indexes in db that you know?
+
+
+### What is Transaction?
+Транзакция является рабочей единицей работы с базой данных (далее – БД). 
+Это последовательность операций, выполняемых в логическом порядке пользователем, либо программой, которая работает с БД.
+
+Мы можем сказать, что транзакция – это распространение изменений в БД. 
+Например, если мы создаём, изменяем или удаляем запись, то мы выполняем транзакцию. 
+Крайне важно контролировать транзакции для гарантирования.
+
+### Describe what ACID?
+Основные концепции транзакции описываются аббревиатурой ACID – Atomicity, Consistency, Isolation, Durability (Атомарность, Согласованность, Изолированность, Долговечность).
+
+Атомарность
+
+Атомарность гарантирует, что любая транзакция будет зафиксирована только целиком (полностью). Если одна из операций в последовательности не будет выполнена, то вся транзакция будет отменена. Тут вводится понятие “отката” (rollback). Т.е. внутри последовательности будут происходить определённые изменения, но по итогу все они будут отменены (“откачены”) и по итогу пользователь не увидит никаких изменений.
+
+Согласованность
+
+Это означает, что любая завершённая транзакция (транзакция, которая достигла завершения транзакции – end of transaction) фиксирует только допустимые результаты. Например, при переводе денег с одного счёта на другой, в случае, если деньги ушли с одного счёта, они должны прийти на другой (это и есть согласованность системы). Списание и зачисление  – это две разные транзакции, поэтому первая транзакция пройдёт без ошибок, а второй просто не будет. Именно поэтому крайне важно учитывать это свойство и поддерживать баланс системы.
+
+Изолированность
+
+Каждая транзакция должна быть изолирована от других, т.е. её результат не должен зависеть от выполнения других параллельных транзакций. На практике, изолированность крайне труднодостижимая вещь, поэтому здесь вводится понятие “уровни изолированности” (транзакция изолируется не полностью).
+
+
+
 ### What is DB Normalization?
 Database Normalization is a technique of organizing the data in the database. Normalization is a systematic approach of decomposing tables to eliminate data redundancy(repetition) and undesirable characteristics like Insertion, Update and Deletion Anamolies. It is a multi-step process that puts data into tabular form, removing duplicated data from the relation tables. Following Noramlization Rules.
+
+### What is DB DeNormalization?
+Denormalization is a strategy used on a previously-normalized database to increase performance. In computing, denormalization is the process of trying to improve the read performance of a database, at the expense of losing some write performance, by adding redundant copies of data or by grouping data.
+This can help us avoid costly joins in a relational database. Note that denormalization does not mean not doing normalization. It is an optimization technique that is applied after doing normalization.
+
+It is often motivated by performance or scalability in relational database software needing to carry out very large numbers of read operations. Denormalization differs from the unnormalized form in that denormalization benefits can only be fully realized on a data model that is otherwise normalized.
+
+For example, in a normalized database, we might have a Courses table and a Teachers table.Each entry in Courses would store the teacherID for a Course but not the teacherName. When we need to retrieve a list of all Courses with the Teacher name, we would do a join between these two tables.
+In some ways, this is great; if a teacher changes is or her name, we only have to update the name in one place.
+The drawback is that if tables are large, we may spend an unnecessarily long time doing joins on tables.
+Denormalization, then, strikes a different compromise. Under denormalization, we decide that we’re okay with some redundancy and some extra effort to update the database in order to get the efficiency advantages of fewer joins.
+
+Pros of Denormalization:-
+
+Retrieving data is faster since we do fewer joins
+Queries to retrieve can be simpler(and therefore less likely to have bugs),
+since we need to look at fewer tables.
+Cons of Denormalization:-
+
+Updates and inserts are more expensive.
+Denormalization can make update and insert code harder to write.
+Data may be inconsistent . Which is the “correct” value for a piece of data?
+Data redundancy necessitates more storage.
 
 ###  Normalization Rules
 Normalization rules are divided into the following normal forms:
@@ -62,3 +113,21 @@ will benefit from its pre-defined structure and set schemas
 An aggregate function performs a calculation one or more values and returns a single value.
 For example in SQL.
 The aggregate function is often used with the GROUP BY clause and HAVING clause of the SELECT statement.
+
+
+### MYSQL: the main differences between INNODB and MYISAM storage engine.
+The main difference between MyISAM and INNODB are :
+
+- MyISAM does not support transactions by tables while InnoDB supports.
+- There are no possibility of row-level locking, relational integrity in MyISAM but with InnoDB this is possible.
+- MyISAM has table-level locking.
+- InnoDB does not support FULLTEXT index while MyISAM supports.
+- Performance speed of MyISAM table is much higher as compared with tables in InnoDB.
+- InnoDB is better option while you are dealing with larger database because it supports transactions, volume while 
+- MyISAM is suitable for small project.
+- As InnoDB supports row-level locking which means inserting and updating is much faster as compared with MyISAM.
+- InnoDB supports ACID (Atomicity, Consistency, Isolation and Durability) property while MyISAM does not support.
+- In InnoDB table,AUTO_INCREMENT field is a part of index.
+Once table in InnoDB is deleted then it can not re-establish.
+- InnoDB does not save data as table level so while implementation of select count(*) from table will again scan the whole table to calculate the number of rows while MyISAM save data as table level so you can easily read out the saved row number.
+- MyISAM does not support FOREIGN-KEY referential-integrity constraints while InnoDB supports.

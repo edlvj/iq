@@ -39,7 +39,7 @@ I: Interface Segregation Principle
 D: Dependency Inversion Principle
 S: A class should be responsible for only one thing. If a class has more than one responsibility, it becomes coupled. A change to one responsibility results to modification of the other responsibility.
 
-O: Every animal adds its own implementation on how it makes a sound in the makeSound. The AnimalSound iterates through the array of animal and just calls its makeSound method.
+O: In object-oriented programming, the open/closed principle states "software entities (classes, modules, functions, etc.) should be open for extension, but closed for modification";[1] that is, such an entity can allow its behaviour to be extended without modifying its source code.
 
 L: The aim of this principle is to ascertain that a sub-class can assume the place of its super-class without errors. If the code finds itself checking the type of class then, it must have violated this principle.
 
@@ -49,16 +49,16 @@ D: There comes a point in software development where our app will be largely com
 
 ### What is Multiple inheritance?
 
-Multiple inheritance is a feature of some object-oriented computer programming languages in which an object or class can inherit characteristics and features from more than one parent object or parent class. 
+Multiple inheritance is a feature of some object-oriented computer programming languages in which an object or class can inherit characteristics and features from more than one parent object or parent class.
 It is distinct from single inheritance, where an object or class may only inherit from one particular object or class.
 
 For example in C++
 ```
-class C: public B, public A  // Note the order 
-{ 
-public: 
-  C()  { cout << "C's constructor called" << endl; } 
-}; 
+class C: public B, public A  // Note the order
+{
+public:
+  C()  { cout << "C's constructor called" << endl; }
+};
 ```
 
 ### What is Composition?
@@ -112,4 +112,8 @@ The class is no longer directly coupled to its dependencies. The dependencies ar
 Different dependencies can be passed in.
 The class is independent. It can be tested in isolation, or extracted into a separate gem.
 All dependencies are explicitly listed as arguments to initialize.
+
+
+### Differnce between Bridge and Adapter Pattern.
+
 

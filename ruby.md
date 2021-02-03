@@ -4,7 +4,8 @@
 In ruby its a object, abstraction data typy with it we can describe object around us. For Example Car or Animals.
 
 ### What is the difference between a class and a module?
-Modules are about providing methods that you can use across multiple classes - think about them as "libraries" . Classes are about objects; modules are about functions.
+Modules are about providing methods that you can use across multiple classes - think about them as "libraries" . 
+Classes are about objects; modules are about functions.
 
 ### What is Eigenclass in Ruby?
 A hidden class associated with each specific instance of another class.
@@ -14,8 +15,12 @@ class << foo
 end
 ```
 
+### How to create a Sigleton in Ruby?
+???
+
+
 ### Explain what singleton methods in Ruby?
-singleton methods in ruby are to add beviahore to one object to class
+Singleton methods in ruby are to add beviahore to one object to class
 
 ### What differents in load and require?
 The load method simply reads and parses another files into your code every time a script is executed.
@@ -96,6 +101,21 @@ module Enumerable
   end
 end
 ```
+
+### Diffrence between .clone and .dup?
+TODO
+
+### Difference between protected, private and public in Ruby?
+TODO
+
+### What in ruby immutable and unmutable?
+TODO
+
+### What diffence between string and symbol?
+TODO
+
+
+
 
 
 

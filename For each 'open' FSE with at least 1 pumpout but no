@@ -1,0 +1,30 @@
+For each 'open' FSE with at least 1 pumpout but no GCD, please create a GCD and associate with FSE.
+
+Please add default GCD (one per FSE) with following properties:
+-name (same as establishment)
+-category (create new category for each impacted tenant called ‘default’)
+-device location (inside)
+-frequency (same as establishment)
+-frequency units (same as establishment)
+-capacities (0)
+
+Rake Task
+
+
+
+
+1. Create default GCD Category for each Tenant - 10 min
+
+2. Select All 'open' Fse  at least 1 pumpout but no GCD - 15 min
+
+3.  Create GCD and Link to this FSE 1 hour
+
+
+
+CHECKING QUERY
+
+SELECT tenants.name AS tenant_name, establishments.name AS establishments_name FROM establishments JOIN tenants ON tenants.id = establishments.tenant_id JOIN pump_outs ON pump_outs.establishment_id = establishments.id LEFT JOIN establishments_grease_traps ON establishments_grease_traps.establishment_id = establishments.id WHERE establishments_grease_traps.id IS NULL AND establishments.closed_at IS NULL GROUP BY tenants.id, establishments.name ORDER BY tenants.name;
+
+TEST
+
+Swift	test_Api
