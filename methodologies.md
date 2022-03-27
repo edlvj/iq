@@ -3,6 +3,25 @@
 ### Describe KISS principle?
 Keep it simple stupid
 
+### Describe basics of DDD?
+https://docs.microsoft.com/en-us/archive/msdn-magazine/2009/february/best-practice-an-introduction-to-domain-driven-design
+
+### Describe basics of grasp?
+General Responsibility Assignment Software Patterns (or Principles), abbreviated GRASP, is a set of "nine fundamental principles in object design and responsibility assignment" 
+
+The different patterns and principles used in GRASP are controller, creator, indirection, information expert, low coupling, high cohesion, polymorphism, protected variations, and pure fabrication.[2] All these patterns solve some software problem common to many software development projects. These techniques have not been invented to create new ways of working, but to better document and standardize old, tried-and-tested programming principles in object-oriented design.
+
+### Describe Continious Delivery?
+
+Continuous delivery (CD) is a software engineering approach in which teams produce software in short cycles, ensuring that the software can be reliably released at any time and, when releasing the software, without doing so manually.[1][2] It aims at building, testing, and releasing software with greater speed and frequency. The approach helps reduce the cost, time, and risk of delivering changes by allowing for more incremental updates to applications in production. A straightforward and repeatable deployment process is important for continuous delivery.
+
+CD contrasts with continuous deployment, a similar approach in which software is also produced in short cycles but through automated deployments rather than manual ones.
+
+### What is GDPR? Name 3 things how to became GDPR compliant?
+What is the GDPR? Europe’s new data privacy and security law includes hundreds of pages’ worth of new requirements for organizations around the world. This GDPR overview will help you understand the law and determine what parts of it apply to you.
+https://gdpr.eu/what-is-gdpr/
+
+
 ### Describe YAGNI principle?
 You aren't gonna need it
 is a principle of extreme programming (XP) that states a programmer should not add functionality until deemed necessary.
@@ -78,3 +97,8 @@ Iterative Model
 Spiral Model
 V-Model
 Big Bang Model
+
+### What is Event Sourcing?
+
+
+

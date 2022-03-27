@@ -43,3 +43,9 @@ For load testing you can use Apache JMeter with own scenario.
 include_examples — include(s) the examples in the current context
 
 it_behaves_like "name" — include(s) the examples in a nested context
+
+### Describe a contract testing?
+Contract testing is a method to verify integration between two applications independently in order to test what has been passed and see if what is returned matches with the “contract”.
+
+Contract tests fit nicely within a microservice architecture, operating in an agile setting. Therefore examples will be based on the experience that we have gained while working in this environment.
+https://github.com/morvader/ContractTesting_Pact

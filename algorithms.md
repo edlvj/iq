@@ -5,6 +5,10 @@
 - Branching: this type of algorithm is represented by the "if-then" problems. If a condition is true, the output will be A, if the condition is false, the output will be B. This algorithm type is also known as "selection type".
 - Loop: for this type, the process might be repeatedly executed under a certain condition. It is represented by "while" and "for" problems. But make sure the process will end after a number of loops under the condition. This algorithm type is also known as "repetition type".
 
+
+### How BST works?
+https://ru.wikipedia.org/wiki/%D0%94%D0%B2%D0%BE%D0%B8%D1%87%D0%BD%D0%BE%D0%B5_%D0%B4%D0%B5%D1%80%D0%B5%D0%B2%D0%BE_%D0%BF%D0%BE%D0%B8%D1%81%D0%BA%D0%B0
+
 ### How work bubble sort.
 The idea is pretty simple: Walk through the list and put two adjacent elements in descending order. But, here’s the kicker: We have to repeatedly walk through the list until there are no longer any swaps to make, meaning, the list is sorter.
 ```

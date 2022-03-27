@@ -28,4 +28,19 @@ Hash indexes at times can provide faster lookups than B-Tree indexes, and can bo
 
 ### How work in Sql - Operator Vacuum?
 VACUUM reclaims storage occupied by dead tuples. In normal PostgreSQL operation, tuples that are deleted or obsoleted by an update are not physically removed from their table; they remain present until a VACUUM is done. Therefore it's necessary to do VACUUM periodically, especially on frequently-updated tables.
+
+### How to avoid locking if we use plan to add new Index?
+
+However, Postgres has a CONCURRENTLY option for CREATE INDEX that creates the index without preventing concurrent INSERTs, UPDATEs, or DELETEs on the table.
  
+To make this option easier to use in migrations, ActiveRecord 4 introduced an algorithm: :concurrently option for add_index.
+
+Here’s an example:
+
+class AddIndexToAsksActive < ActiveRecord::Migration
+  disable_ddl_transaction!
+
+  def change
+    add_index :asks, :active, algorithm: :concurrently
+  end
+end

@@ -1,6 +1,6 @@
 # Security
 
-### 
+
 
 ### Explain what is web session?
 Web session, the session is a data structure that an application uses to store temporary data that is useful only during the time a user is interacting with the application.

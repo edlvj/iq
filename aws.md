@@ -55,3 +55,5 @@ Following are the advantages of autoscaling
 Offers fault tolerance
 Better availability
 Better cost management
+
+

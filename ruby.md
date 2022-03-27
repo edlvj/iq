@@ -16,8 +16,11 @@ end
 ```
 
 ### How to create a Sigleton in Ruby?
-???
+В стандартной библиотеке определен модуль Singleton, который производит некоторые действия над классом, в частности:
 
+Делает .new приватным
+Добавляет .instance, который создает и/или возвращает экземпляр
+Переопределяет #dup и #clone, чтобы те вызывали ошибкуs
 
 ### Explain what singleton methods in Ruby?
 Singleton methods in ruby are to add beviahore to one object to class
@@ -103,20 +106,50 @@ end
 ```
 
 ### Diffrence between .clone and .dup?
-TODO
 
-### Difference between protected, private and public in Ruby?
-TODO
+Both methods copy an object, the difference is that dup doesn’t copy the object attributes.
+What object attributes?
 
-### What in ruby immutable and unmutable?
-TODO
+frozen status
+tainted status
+singleton class
 
-### What diffence between string and symbol?
-TODO
+https://www.rubyguides.com/2018/11/dup-vs-clone/
 
+### What is Thread?
 
+Threads make your Ruby programs do multiple things at the same time.
+Things like:
 
+Reading multiple files
+Handling multiple web request
+Making multiple API connections
 
+### What is Ractor?
+Ractor is a Actor-model abstraction for Ruby that provides thread-safe parallel execution.
 
+Ractors do not share usual objects, so the some kind of thread-safety concerns such as data-race, race-conditions are not available on multi-ractor programming.
 
+To achieve this, ractors severely limit object sharing between different ractors. For example, unlike threads, ractors can’t access each other’s objects, nor any objects through variables of the outer scope.
 
+### Mention what the difference is between false and nil in Ruby?
+
+In Ruby, false is an object of FalseClass to represent a boolean value, while Nil is an object of NilClass which indicates the absence of a value. It has an object_id 4.
+
+### How Hash Table Works?
+https://anadea.info/blog/how-hash-table-works-ruby-examples
+
+### What is Object Id in Ruby?
+For every object, Ruby offers a method called object_id. You guessed it, this represents a random id for the specific object. This value is a reference of the address in memory where the object is store. Every object has a unique object id that will not change throughout the life of this object.
+
+### What a difference between Array and Hash and what type fasters?
+
+Hashes are much faster for lookups, but Array better for inserting
+
+### Зачем использовать ruby потоки если они на одном ядре.
+Выгоду из потоков можно получить при работе с блокирующющими операциями чтение из Файлов или обработка запросов.
+Это более эфективно работает с рапределением запроса в выпляемой программе.
+
+### What a difference between super vs super() in Ruby
+super equals super(*args), which brings ALL args to the inherited method
+Use super() when you just want to call the method inherited from Parent without passing args.

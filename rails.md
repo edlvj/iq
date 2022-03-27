@@ -1,5 +1,12 @@
 # Ruby on Rails
 
+
+### Polymorh associations в ActiveRecord?
+
+Consider the following situation: we have an application that enables users to review events and restaurants. As we’ve just seen, this involves associating the Review model with both the Event and Restaurant models using a single, polymorphic association.
+
+The database representation of this polymorphism consists of two columns, which represent the ID and the type of the actual entity that our review will belong to. In our case, these columns will be reviewable_id (type: integer) and reviewable_type (type: character varying).
+
 ### What is Rack?
 Rack provides a minimal interface between webservers that support Ruby and Ruby frameworks.
 
@@ -136,7 +143,6 @@ Some helper classes are present in the helper sub directory which is used for as
 
 Active Job is a framework for declaring jobs and making them run on a variety of queuing backends. These jobs can be everything from regularly scheduled clean-ups, to billing charges, to mailings. Anything that can be chopped up into small units of work and run in parallel, really.
 
-
 ### For that you should use .transaction mehtod for ActiveRecord Models.
 
 Transactions are protective blocks where SQL statements are only permanent if they can all succeed as one atomic action. The classic example is a transfer between two accounts where you can only have a deposit if the withdrawal succeeded and vice versa. Transactions enforce the integrity of the database and guard the data against program errors or database break-downs. So basically you should use transaction blocks whenever you have a number of statements that must be executed together or not at all.
@@ -147,11 +153,12 @@ Exceptions will force a ROLLBACK that returns the database to the state before t
 
 :joins returns read-only objects, 
 :includes does not
-
 :joins uses inner join, :includes uses outer join.
 
 the main reason of :includes is eager loading, to avoid the N+1 problem of loading in attributes of each object using a separate query.
 
+### Puma how working with paraller workers?
+https://www.speedshop.co/2017/10/12/appserver.html
 
 
 

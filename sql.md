@@ -88,9 +88,12 @@ CREATE TABLE Employee
 
 ```
 
-### What is Transaction in SLQ?
-- TODO:answer
+### What is Transaction in SQL?
 
-### Describe between LEFT JOIN от INNER JOIN?
-- TODO:answer
+A transaction is a logical unit of work that contains one or more SQL statements. A transaction is an atomic unit. The effects of all the SQL statements in a transaction can be either all committed (applied to the database) or all rolled back (undone from the database).
+
+### Describe difference between LEFT JOIN от INNER JOIN?
+INNER JOIN: returns rows when there is a match in both tables.
+
+LEFT JOIN: returns all rows from the left table, even if there are no matches in the right table.
 
