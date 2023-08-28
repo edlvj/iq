@@ -8,6 +8,7 @@
 - rails
 - hamani
 - angular.js
+- react.js
 
 ### DATABASES
 - sql
@@ -24,3 +25,8 @@
 - methodologies
 - computer science
 - deployment and linux managment
+
+If you want to simulate interview.
+Run 
+
+ruby simulator.rb

@@ -80,6 +80,10 @@ Object Marshalling is serialization.
 
 Fibers are light weight primitives in the Ruby standard library which can be paused, resumed and scheduled manually. They are pretty much the same as ES6 Generators if you’re familiar with JavaScript.
 
+### Differences between Fiber and Thread.
+
+Fibers are similar to Threads. The main difference is that it is up to the programmer when to start, pause and resume fibers, while threads are controlled by the operating system. This makes fibers lightweight and more efficient when it comes to context switching. Also, a thread can have many fibers
+
 ### When we are must use EventMachine?
 
 EventMachine (aka EM) is a gem which is written in C++ and Ruby. It provides event-driven I/O using the Reactor pattern and can basically make your Ruby code looks like Node.js
@@ -153,3 +157,6 @@ Hashes are much faster for lookups, but Array better for inserting
 ### What a difference between super vs super() in Ruby
 super equals super(*args), which brings ALL args to the inherited method
 Use super() when you just want to call the method inherited from Parent without passing args.
+### Primer on Ruby Method Lookup ?
+https://gist.github.com/damien-roche/351bf4e7991449714533
+

@@ -97,3 +97,20 @@ INNER JOIN: returns rows when there is a match in both tables.
 
 LEFT JOIN: returns all rows from the left table, even if there are no matches in the right table.
 
+### Describe SQL optimization tecniqs?
+TIP 0: Use Profiling Tools or ANALYZE OPERATOR
+Tip 1: Add missing indexes
+Tip 2: Check for unused indexes
+Tip 3: Avoid using multiple OR in the FILTER predicate
+Tip 4: Use wildcards at the end of a phrase only
+Tip 5: Avoid too many JOINs
+Tip 6: Avoid using SELECT DISTINCT
+Tip 7: Use SELECT fields instead of SELECT *
+Tip 11: Minimize large write operations
+Tip 12: Create joins with INNER JOIN (not WHERE)
+
+# https://blog.devart.com/how-to-optimize-sql-query.html#create-joins-with-inner-join
+
+
+
+

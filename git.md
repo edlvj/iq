@@ -12,7 +12,15 @@ When you want to record the current state of the working directory and the index
 
 ### Describe git rebase?
 
-Rebase the current branch on top of the master branch:
+Rebase the current branch on top of the master branch
+
+
+### How to make one out of three commits?
+git rebase -i master (instead of master you can also use a specific commit)
+
+Change 'pick' to 'squash'
+Save changes
+
 
 ### Describe git merge strategies?
 

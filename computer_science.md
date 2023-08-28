@@ -5,6 +5,14 @@
 and 
 1000 in decemical = 8
 
+### http status codes by Groups?
+
+Informational responses ( 100 – 199 )
+Successful responses ( 200 – 299 )
+Redirection messages ( 300 – 399 )
+Client error responses ( 400 – 499 )
+Server error responses ( 500 – 599 )
+
 ### How work HTTP caching?
 We always must return Last-Modified or ETag Headers for clients.
 If response body on server not changed we must return HTTP status - 304 Not Modified

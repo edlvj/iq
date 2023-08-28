@@ -5,7 +5,6 @@
 The Basic Concepts of OOP is ecapsulation, inheritance and polymorphism.
 
 ### What is a class?
-
 Сlass is a data structure that contains data fields, like a record, as well as various methods which operate on the contents of the record.
 
 ### What is an object?

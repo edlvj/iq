@@ -45,3 +45,10 @@ end
 ### What is Levenshtein distance?
 Levenshtein distance is a string metric for measuring the difference between two sequences. 
 Informally, the Levenshtein distance between two words is the minimum number of single-character edits (insertions, deletions or substitutions) required to change one word into the other.
+
+### What is Big O notation? Give an example.
+Big O notation is a mathematical way of representing the time complexity of an algorithm. It is typically used to compare the efficiency of different algorithms. For example, if we have two algorithms, one with a time complexity of O(n) and one with a time complexity of O(n^2), then the first algorithm is more efficient.
+
+### What are the main differences between a Heap and a Stack? Which one is faster?
+The main difference between a Heap and a Stack is that a Heap is typically used to store data that needs to be accessed quickly, while a Stack is used to store data that needs to be accessed in a specific order. Heaps are typically faster than Stacks.
+

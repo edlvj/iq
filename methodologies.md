@@ -17,6 +17,12 @@ Continuous delivery (CD) is a software engineering approach in which teams produ
 
 CD contrasts with continuous deployment, a similar approach in which software is also produced in short cycles but through automated deployments rather than manual ones.
 
+
+### Describe Continuous Integration ?
+
+Continuous integration (CI) is the practice of developers regularly integrating their code changes into a repository. Integration may take place several times a day and is verified by automated tests and a build process. As a result, integration challenges can be avoided, bugs can be found early in the development cycle, fixed, and tested iteratively. Every time new commits are integrated into the main branch, continuous integration emphasizes testing automation to make sure the application is not broken.
+
+
 ### What is GDPR? Name 3 things how to became GDPR compliant?
 What is the GDPR? Europe’s new data privacy and security law includes hundreds of pages’ worth of new requirements for organizations around the world. This GDPR overview will help you understand the law and determine what parts of it apply to you.
 https://gdpr.eu/what-is-gdpr/
@@ -99,6 +105,20 @@ V-Model
 Big Bang Model
 
 ### What is Event Sourcing?
+Event Sourcing is an architectural design pattern that stores data in an append-only log. It is part of a wider ecosystem of design patterns that work together in various ways to allow developers to create the most effective architecture for their needs.
+
+### What is CQRS?
+CQRS stands for Command and Query Responsibility Segregation, a pattern that separates read and update operations for a data store. Implementing CQRS in your application can maximize its performance, scalability, and security.
+
+- separating writes from reads
+- queries only return data, free from side effects
+- events handled reliably
+
+
+### What Design Patterns you know?
+
+Builder, Decorator, Form, Interactor, Observer, Policy, Presenter, Query, Service, ValueObject.
+
 
 
 
